@@ -1,0 +1,44 @@
+---
+'':
+  - type: ALIAS
+    value: jekyll.github.io
+  - type: MX
+    values:
+    - priority: 10
+      value: mxa.mailgun.org
+    - priority: 10
+      value: mxb.mailgun.org
+  - type: TXT
+    value: "v=spf1 include:mailgun.org include:_hostedspf.discourse.org ~all"
+dashboard:
+  - type: CNAME
+    value: jekyll-dashboard.herokuapp.com
+'discourse._domainkey':
+  - type: TXT
+    value: "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCojtk3fqF69pT6SZcIwoYzjQfdOBTFK7AOyxEGBwHLZ+xqwQQlVgfL6xFZ7FhCYAczkGTCjdChX/qf6dg4LrtXrb+apymj9WpLOwPir6P5Mv9FH3t3BgrQeyyCLhAHqDrUk+kU3B2z1uva3oWw3qN9MLZaX8HjR13w9ywVEgzjpQIDAQAB"
+email:
+  - type: CNAME
+    value: mailgun.org
+email.talk:
+  - type: CNAME
+    value: mailgun.org
+import:
+  - type: CNAME
+    value: jekyll.github.io
+'pic._domainkey':
+  - type: TXT
+    value: "k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCeXUl1vOMvfMJWYoNylrDLYOeSNadGsxPJEgc0iYgAVbKhxZXBbiNxlt6lhziENYchiUgPNC2JVK9izmXVLo5uizgBVWaYrLOLFiy4Kb4ewL8uEl2cBlWsuFSmOa+6zx4dErmGXLf4hie0blQ/g1rgg11ll34+1XpGYTjsIDXbHwIDAQAB"
+talk:
+  - type: ALIAS
+    value: jekyllrb.hosted-by-discourse.com
+  - type: TXT
+    value: "v=spf1 include:mailgun.org ~all"
+teams:
+  - type: CNAME
+    value: teams.jekyllrb.com.herokudns.com
+www:
+  - type: CNAME
+    value: jekyll.github.io
+www.teams:
+  - type: CNAME
+    value: teams.jekyllrb.com.herokudns.com

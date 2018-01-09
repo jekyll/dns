@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+
+if ! [ -x "env/bin/octodns-sync" ]; then
+  script/bootstrap
+fi
+
+source env/bin/activate
+
+env/bin/octodns-sync --config=./config/production.yaml
