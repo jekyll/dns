@@ -36,6 +36,9 @@ talk:
 teams:
   - type: CNAME
     value: teams.jekyllrb.com.herokudns.com
+utterson:
+  - type: CNAME
+    value: d34iuq4h6fd9zb.cloudfront.net
 www:
   - type: CNAME
     value: jekyll.github.io
