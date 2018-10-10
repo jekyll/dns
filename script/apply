@@ -8,4 +8,8 @@ fi
 
 source env/bin/activate
 
-env/bin/octodns-sync --config=./config/production.yaml
+. script/provider-credentials
+
+env/bin/octodns-sync \
+    --config=./config/production.yaml \
+    "$@"

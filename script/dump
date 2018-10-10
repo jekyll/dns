@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ -x "env/bin/octodns-dump" ]; then
+  script/bootstrap
+fi
+
+. script/provider-credentials
+
+./env/bin/octodns-dump \
+  --config-file config/production.yaml \
+  --output-dir config \
+  jekyllrb.com. cloudflare \
+  "$@"
