@@ -6,13 +6,13 @@
   - ttl: 600
     type: MX
     values:
-    - exchange: mxa.mailgun.org.
+    - exchange: in1-smtp.messagingengine.com.
       preference: 10
-    - exchange: mxb.mailgun.org.
+    - exchange: in2-smtp.messagingengine.com.
       preference: 20
   - ttl: 600
     type: TXT
-    value: v=spf1 include:mailgun.org include:_hostedspf.discourse.org ~all
+    value: v=spf1 include:spf.messagingengine.com include:_hostedspf.discourse.org ~all
 _github-challenge-jekyll:
   ttl: 600
   type: TXT
@@ -25,18 +25,32 @@ discourse._domainkey:
   ttl: 600
   type: TXT
   value: v=DKIM1\; k=rsa\; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCojtk3fqF69pT6SZcIwoYzjQfdOBTFK7AOyxEGBwHLZ+xqwQQlVgfL6xFZ7FhCYAczkGTCjdChX/qf6dg4LrtXrb+apymj9WpLOwPir6P5Mv9FH3t3BgrQeyyCLhAHqDrUk+kU3B2z1uva3oWw3qN9MLZaX8HjR13w9ywVEgzjpQIDAQAB
-email:
+fm1._domainkey:
   ttl: 600
-  type: CNAME
-  value: mailgun.org.
-email.talk:
+  type: TXT
+  value: fm1.jekyllrb.com.dkim.fmhosted.com
+fm2._domainkey:
   ttl: 600
-  type: CNAME
-  value: mailgun.org.
+  type: TXT
+  value: fm2.jekyllrb.com.dkim.fmhosted.com
+fm3._domainkey:
+  ttl: 600
+  type: TXT
+  value: fm3.jekyllrb.com.dkim.fmhosted.com
 import:
   ttl: 600
   type: CNAME
   value: jekyll.github.io.
+mail:
+  ttl: 600
+  type: A
+  values:
+    - 66.111.4.147
+    - 66.111.4.148
+mesmtp._domainkey:
+  ttl: 600
+  type: TXT
+  value: mesmtp.jekyllrb.com.dkim.fmhosted.com
 pic._domainkey:
   ttl: 600
   type: TXT
