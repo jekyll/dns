@@ -65,7 +65,11 @@ talk:
 teams:
   ttl: 600
   type: CNAME
-  value: teams.jekyllrb.com.herokudns.com.
+  value: teams.jekyllrb.com.herokudns.com
+utterson:
+  ttl: 600
+  type: CNAME
+  value: d34iuq4h6fd9zb.cloudfront.net
 www:
   ttl: 600
   type: CNAME
