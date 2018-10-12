@@ -1,0 +1,10 @@
+---
+providers:
+  config:
+    class: octodns.provider.yaml.YamlProvider
+    directory: ./config
+
+zones:
+  jekyllrb.com.:
+    sources:
+      - config
