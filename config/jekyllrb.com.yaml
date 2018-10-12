@@ -1,47 +1,80 @@
 ---
-'':
-  - type: ALIAS
-    value: jekyll.github.io
-  - type: MX
+? ''
+: - ttl: 600
+    type: ALIAS
+    value: jekyll.github.io.
+  - ttl: 600
+    type: MX
     values:
-    - priority: 10
-      value: mxa.mailgun.org
-    - priority: 10
-      value: mxb.mailgun.org
-  - type: TXT
-    value: "v=spf1 include:mailgun.org include:_hostedspf.discourse.org ~all"
+    - exchange: in1-smtp.messagingengine.com.
+      preference: 10
+    - exchange: in2-smtp.messagingengine.com.
+      preference: 20
+  - ttl: 600
+    type: TXT
+    value: v=spf1 include:spf.messagingengine.com include:mailgun.org include:_hostedspf.discourse.org ~all
+_github-challenge-jekyll:
+  ttl: 600
+  type: TXT
+  value: de13dd597c
 dashboard:
-  - type: CNAME
-    value: jekyll-dashboard.herokuapp.com
-'discourse._domainkey':
-  - type: TXT
-    value: "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCojtk3fqF69pT6SZcIwoYzjQfdOBTFK7AOyxEGBwHLZ+xqwQQlVgfL6xFZ7FhCYAczkGTCjdChX/qf6dg4LrtXrb+apymj9WpLOwPir6P5Mv9FH3t3BgrQeyyCLhAHqDrUk+kU3B2z1uva3oWw3qN9MLZaX8HjR13w9ywVEgzjpQIDAQAB"
-email:
-  - type: CNAME
-    value: mailgun.org
-email.talk:
-  - type: CNAME
-    value: mailgun.org
+  ttl: 600
+  type: CNAME
+  value: jekyll-dashboard.herokuapp.com.
+discourse._domainkey:
+  ttl: 600
+  type: TXT
+  value: v=DKIM1\; k=rsa\; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCojtk3fqF69pT6SZcIwoYzjQfdOBTFK7AOyxEGBwHLZ+xqwQQlVgfL6xFZ7FhCYAczkGTCjdChX/qf6dg4LrtXrb+apymj9WpLOwPir6P5Mv9FH3t3BgrQeyyCLhAHqDrUk+kU3B2z1uva3oWw3qN9MLZaX8HjR13w9ywVEgzjpQIDAQAB
+fm1._domainkey:
+  ttl: 600
+  type: TXT
+  value: fm1.jekyllrb.com.dkim.fmhosted.com
+fm2._domainkey:
+  ttl: 600
+  type: TXT
+  value: fm2.jekyllrb.com.dkim.fmhosted.com
+fm3._domainkey:
+  ttl: 600
+  type: TXT
+  value: fm3.jekyllrb.com.dkim.fmhosted.com
 import:
-  - type: CNAME
-    value: jekyll.github.io
-'pic._domainkey':
-  - type: TXT
-    value: "k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCeXUl1vOMvfMJWYoNylrDLYOeSNadGsxPJEgc0iYgAVbKhxZXBbiNxlt6lhziENYchiUgPNC2JVK9izmXVLo5uizgBVWaYrLOLFiy4Kb4ewL8uEl2cBlWsuFSmOa+6zx4dErmGXLf4hie0blQ/g1rgg11ll34+1XpGYTjsIDXbHwIDAQAB"
+  ttl: 600
+  type: CNAME
+  value: jekyll.github.io.
+mail:
+  ttl: 600
+  type: A
+  values:
+    - 66.111.4.147
+    - 66.111.4.148
+mesmtp._domainkey:
+  ttl: 600
+  type: TXT
+  value: mesmtp.jekyllrb.com.dkim.fmhosted.com
+pic._domainkey:
+  ttl: 600
+  type: TXT
+  value: k=rsa\; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCeXUl1vOMvfMJWYoNylrDLYOeSNadGsxPJEgc0iYgAVbKhxZXBbiNxlt6lhziENYchiUgPNC2JVK9izmXVLo5uizgBVWaYrLOLFiy4Kb4ewL8uEl2cBlWsuFSmOa+6zx4dErmGXLf4hie0blQ/g1rgg11ll34+1XpGYTjsIDXbHwIDAQAB
 talk:
-  - type: ALIAS
-    value: jekyllrb.hosted-by-discourse.com
-  - type: TXT
-    value: "v=spf1 include:mailgun.org ~all"
+- ttl: 600
+  type: A
+  value: 216.218.240.80
+- ttl: 600
+  type: TXT
+  value: v=spf1 include:mailgun.org ~all
 teams:
-  - type: CNAME
-    value: teams.jekyllrb.com.herokudns.com
+  ttl: 600
+  type: CNAME
+  value: teams.jekyllrb.com.herokudns.com
 utterson:
-  - type: CNAME
-    value: d34iuq4h6fd9zb.cloudfront.net
+  ttl: 600
+  type: CNAME
+  value: d34iuq4h6fd9zb.cloudfront.net
 www:
-  - type: CNAME
-    value: jekyll.github.io
+  ttl: 600
+  type: CNAME
+  value: jekyll.github.io.
 www.teams:
-  - type: CNAME
-    value: teams.jekyllrb.com.herokudns.com
+  ttl: 600
+  type: CNAME
+  value: teams.jekyllrb.com.herokudns.com.
