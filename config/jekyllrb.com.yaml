@@ -12,7 +12,7 @@
       preference: 20
   - ttl: 600
     type: TXT
-    value: v=spf1 include:spf.messagingengine.com include:_hostedspf.discourse.org ~all
+    value: v=spf1 include:spf.messagingengine.com include:mailgun.org include:_hostedspf.discourse.org ~all
 _github-challenge-jekyll:
   ttl: 600
   type: TXT
