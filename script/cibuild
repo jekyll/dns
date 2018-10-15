@@ -4,11 +4,6 @@ if [ -x "env/bin/octodns-compare" ]; then
   script/bootstrap
 fi
 
-. script/provider-credentials
-
-./env/bin/octodns-compare \
-  --config-file config/production.yaml \
-  --a cloudflare \
-  --b config \
-  --zone jekyllrb.com. \
-  "$@"
+./env/bin/octodns-validate \
+  --config-file ./config/test.yaml \
+  --debug
