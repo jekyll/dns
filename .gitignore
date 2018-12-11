@@ -1,2 +1,4 @@
 env/
 tmp/
+vendor/
+.vscode/
