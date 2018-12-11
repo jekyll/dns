@@ -102,7 +102,7 @@ www:
 www.teams:
   octodns:
     cloudflare:
-      proxied: false
+      proxied: true
   ttl: 600
   type: CNAME
   value: teams.jekyllrb.com.herokudns.com.
