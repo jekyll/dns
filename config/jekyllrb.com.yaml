@@ -24,7 +24,7 @@ _github-challenge-jekyll:
 dashboard:
   octodns:
     cloudflare:
-      proxied: false
+      proxied: true
   ttl: 600
   type: CNAME
   value: jekyll-dashboard.herokuapp.com.
