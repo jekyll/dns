@@ -2,28 +2,43 @@
 
 This repository contains the DNS entries for Jekyll'd web presence, which is largely jekyllrb.com.
 
-### Installation
+### Making changes
 
-```bash
-script/bootstrap
+Modify the YAML file for the zone you'd like to update. The top-level key
+is the subdomain value, and its value is a Hash/Dictionary of values.
+
+A record:
+
+```yaml
+www:
+  type: CNAME
+  value: jekyll.github.io.
 ```
 
-### Usage
+This will create a CNAME record at `www.<your-zone>` which points to
+`jekyll.github.io`. Easy, huh?
 
-Modify the records you'd like to change in `config/<zone>.yaml`. Make a PR.
+Now create a new branch, commit your changes, and create a PR.
 
-Once you have approval, check out the branch and run:
+### Testing
+
+Before applying your change, test it:
 
 ```bash
-$ script/cibuild
-# Changes will be printed. Make sure they look good.
+$ script/cibuild || script/apply
+```
+
+It should print that there were mismatches and what it would do. Post this in the PR.
+
+### Applying your change
+
+Once you're satisfied with your change, run:
+
+```bash
 $ script/apply --doit
-# Applies the changes
 ```
 
-### Current Setup
+If it complains about too many changes, be VERY CAREFUL! You can _force_
+changes by adding the `--force` flag to your `script/apply` call.
 
-DNS for jekyllrb.com is currently managed by Cloudflare. To increase
-transparency and make things a little easier to manage across a team, this
-file-based DNS approach was setup. If you wish to change any DNS records
-for jekyllrb.com, please submit a pull request.
+Once your changes have been applied, copy the output and paste it into your PR. Then merge the PR.
