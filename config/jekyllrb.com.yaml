@@ -54,7 +54,7 @@ import:
 mail:
   octodns:
     cloudflare:
-      proxied: false
+      proxied: true
   ttl: 600
   type: A
   values:
