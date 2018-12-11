@@ -2,7 +2,7 @@
 
 set -e
 
-if [ -x "vendor/bin/octodns-validate" ]; then
+if ! [ -x "vendor/bin/octodns-validate" ]; then
   script/bootstrap
 fi
 

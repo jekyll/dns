@@ -25,7 +25,7 @@ dashboard:
   octodns:
     cloudflare:
       proxied: true
-  ttl: 600
+  ttl: 1
   type: CNAME
   value: jekyll-dashboard.herokuapp.com.
 discourse._domainkey:
@@ -55,7 +55,7 @@ mail:
   octodns:
     cloudflare:
       proxied: true
-  ttl: 600
+  ttl: 1
   type: A
   values:
   - 66.111.4.147
@@ -72,7 +72,7 @@ talk:
 - octodns:
     cloudflare:
       proxied: true
-  ttl: 600
+  ttl: 1
   type: A
   value: 216.218.240.80
 - ttl: 600
@@ -82,27 +82,27 @@ teams:
   octodns:
     cloudflare:
       proxied: true
-  ttl: 600
+  ttl: 1
   type: CNAME
   value: teams.jekyllrb.com.herokudns.com.
 utterson:
   octodns:
     cloudflare:
       proxied: true
-  ttl: 600
+  ttl: 1
   type: CNAME
   value: d34iuq4h6fd9zb.cloudfront.net.
 www:
   octodns:
     cloudflare:
       proxied: true
-  ttl: 600
+  ttl: 1
   type: CNAME
   value: jekyll.github.io.
 www.teams:
   octodns:
     cloudflare:
       proxied: true
-  ttl: 600
+  ttl: 1
   type: CNAME
   value: teams.jekyllrb.com.herokudns.com.
