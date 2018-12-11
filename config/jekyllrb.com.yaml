@@ -95,7 +95,7 @@ utterson:
 www:
   octodns:
     cloudflare:
-      proxied: false
+      proxied: true
   ttl: 600
   type: CNAME
   value: jekyll.github.io.
