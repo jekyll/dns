@@ -2,14 +2,12 @@
 
 set -e
 
-if ! [ -x "env/bin/octodns-sync" ]; then
+if ! [ -x "vendor/bin/octodns-sync" ]; then
   script/bootstrap
 fi
 
-source env/bin/activate
-
 . script/provider-credentials
 
-env/bin/octodns-sync \
+./vendor/bin/octodns-sync \
     --config=./config/production.yaml \
     "$@"

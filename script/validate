@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+
+if [ -x "vendor/bin/octodns-validate" ]; then
+  script/bootstrap
+fi
+
+vendor/bin/octodns-validate \
+  --config-file ./config/test.yaml \
+  --debug

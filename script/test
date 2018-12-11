@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+
+if ! [ -x "vendor/bin/python" ]; then
+  script/bootstrap
+fi
+
+for testfile in test/*.sh; do
+    (set -x ; bash $testfile)
+done

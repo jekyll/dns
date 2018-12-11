@@ -1,9 +1,5 @@
 #!/bin/bash
-
-if [ -x "env/bin/octodns-compare" ]; then
-  script/bootstrap
-fi
-
-./env/bin/octodns-validate \
-  --config-file ./config/test.yaml \
-  --debug
+set -ex
+script/bootstrap
+script/validate
+script/test

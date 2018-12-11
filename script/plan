@@ -1,14 +1,17 @@
 #!/bin/bash
 
-if [ -x "env/bin/octodns-compare" ]; then
+if ! [ -x "vendor/bin/octodns-compare" ]; then
   script/bootstrap
 fi
 
 . script/provider-credentials
 
-./env/bin/octodns-compare \
-  --config-file config/production.yaml \
-  --a cloudflare \
-  --b config \
-  --zone jekyllrb.com. \
-  "$@"
+for zone in "${ZONES[@]}"; do
+    echo "Processing zone $zone."
+    ./vendor/bin/octodns-compare \
+      --config-file config/production.yaml \
+      --a cloudflare \
+      --b config \
+      --zone "$zone". \
+      "$@"
+done

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+BRANCH_NAME="$1"
+if [ -z "$BRANCH_NAME" ]; then
+  echo "usage: $0 <branch>"
+  exit 1
+fi
+
+source vendor/bin/activate
+
+vendor/bin/pip install --upgrade \
+    "git+https://github.com/github/octodns.git@$BRANCH_NAME"

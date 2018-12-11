@@ -1,0 +1,13 @@
+#!/bin/bash
+
+dockerflags="--rm -w $(pwd)"
+
+for file in *; do
+    if [ "$file" != "vendor" ]; then
+        dockerflags="$dockerflags -v $(pwd)/$file:$(pwd)/$file"
+    fi
+done
+
+set -x
+
+docker run $dockerflags python:2.7 script/cibuild
