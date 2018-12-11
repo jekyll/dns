@@ -88,7 +88,7 @@ teams:
 utterson:
   octodns:
     cloudflare:
-      proxied: false
+      proxied: true
   ttl: 600
   type: CNAME
   value: d34iuq4h6fd9zb.cloudfront.net.
