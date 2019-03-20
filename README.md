@@ -1,6 +1,6 @@
 ## DNS for Jekyll's web presence
 
-This repository contains the DNS entries for Jekyll'd web presence, which is largely jekyllrb.com.
+This repository contains the DNS entries for Jekyll's web presence, which is largely jekyllrb.com.
 
 ### Making changes
 
