@@ -71,7 +71,7 @@ pic._domainkey:
 talk:
 - octodns:
     cloudflare:
-      proxied: true
+      proxied: false
   ttl: 1
   type: A
   value: 216.218.240.80
