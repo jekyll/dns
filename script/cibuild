@@ -1,5 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 set -ex
-script/bootstrap
 script/validate
 script/test

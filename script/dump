@@ -1,21 +1,14 @@
-#!/bin/bash
+#!/bin/sh
 
 set -e
 
-if ! [ -x "vendor/bin/octodns-dump" ]; then
-  script/bootstrap
-fi
-
 . script/provider-credentials
 
-
-./vendor/bin/octodns-dump --version
-
-for zone in "${ZONES[@]}"; do
+for zone in ${ZONES}; do
     echo "Processing zone $zone."
-    ./vendor/bin/octodns-dump \
-      --config-file config/production.yaml \
-      --output-dir config \
+    octodns dump \
+      --config-file "$(pwd)/config/production.yaml" \
+      --output-dir "$(pwd)/config" \
       "$zone." cloudflare \
       "$@"
 done

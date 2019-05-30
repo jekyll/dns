@@ -1,13 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 
 set -e
 
-if ! [ -x "vendor/bin/octodns-sync" ]; then
-  script/bootstrap
-fi
-
 . script/provider-credentials
 
-./vendor/bin/octodns-sync \
-    --config=./config/production.yaml \
+octodns sync \
+    --config=config/production.yaml \
     "$@"
