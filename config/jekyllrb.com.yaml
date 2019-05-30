@@ -73,11 +73,8 @@ talk:
     cloudflare:
       proxied: false
   ttl: 1
-  type: A
-  value: 216.218.240.80
-- ttl: 600
-  type: TXT
-  value: v=spf1 include:mailgun.org ~all
+  type: CNAME
+  value: jekyllrb.hosted-by-discourse.com.
 teams:
   octodns:
     cloudflare:
