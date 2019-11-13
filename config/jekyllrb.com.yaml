@@ -9,10 +9,10 @@
   - ttl: 600
     type: MX
     values:
-    - exchange: in1-smtp.messagingengine.com.
+    - exchange: mxa.mailgun.org.
       preference: 10
-    - exchange: in2-smtp.messagingengine.com.
-      preference: 20
+    - exchange: mxb.mailgun.org.
+      preference: 10
   - ttl: 600
     type: TXT
     value: v=spf1 include:spf.messagingengine.com include:mailgun.org include:_hostedspf.discourse.org
@@ -32,6 +32,10 @@ discourse._domainkey:
   ttl: 600
   type: TXT
   value: v=DKIM1\; k=rsa\; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCojtk3fqF69pT6SZcIwoYzjQfdOBTFK7AOyxEGBwHLZ+xqwQQlVgfL6xFZ7FhCYAczkGTCjdChX/qf6dg4LrtXrb+apymj9WpLOwPir6P5Mv9FH3t3BgrQeyyCLhAHqDrUk+kU3B2z1uva3oWw3qN9MLZaX8HjR13w9ywVEgzjpQIDAQAB
+email:
+  ttl: 1
+  type: CNAME
+  value: mailgun.org.
 fm1._domainkey:
   ttl: 600
   type: TXT
