@@ -9,9 +9,9 @@
   - ttl: 600
     type: MX
     values:
-    - exchange: mxa.mailgun.org
+    - exchange: mxa.mailgun.org.
       preference: 10
-    - exchange: mxb.mailgun.org
+    - exchange: mxb.mailgun.org.
       preference: 10
   - ttl: 600
     type: TXT
@@ -35,7 +35,7 @@ discourse._domainkey:
 email:
   ttl: 1
   type: CNAME
-  value: mailgun.org
+  value: mailgun.org.
 fm1._domainkey:
   ttl: 600
   type: TXT
