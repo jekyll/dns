@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:
+      - master
+      - github-actions
+
+name: Deploy on push
+jobs:
+  deployOnPush:
+    name: octodns sync
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: octodns sync
+      uses: docker://parkr/octodns:cf3dc943152ea6ed005969ec835513ca150a3de0
+      env:
+        CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
+      with:
+        args: octodns-sync --config-file ./config/production.yaml --doit
