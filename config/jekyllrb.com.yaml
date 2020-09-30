@@ -85,7 +85,7 @@ teams:
       proxied: true
   ttl: 1
   type: CNAME
-  value: teams.jekyllrb.com.herokudns.com.
+  value: symmetrical-bee-r6fywfpzwjn2o8rl9lgt3lyn.herokudns.com.
 utterson:
   octodns:
     cloudflare:
@@ -106,4 +106,4 @@ www.teams:
       proxied: true
   ttl: 1
   type: CNAME
-  value: teams.jekyllrb.com.herokudns.com.
+  value: symmetrical-bee-r6fywfpzwjn2o8rl9lgt3lyn.herokudns.com.
