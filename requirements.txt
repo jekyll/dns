@@ -1,2 +1,2 @@
 git+git://github.com/mamercad/octodns@cf3dc943152ea6ed005969ec835513ca150a3de0#egg=octodns
-pip===18.1
+pip===19.2
