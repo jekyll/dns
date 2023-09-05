@@ -5,7 +5,7 @@ jobs:
     name: octodns test
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: octodns test
       uses: docker://octodns/cloudflare:2022.12
       env:
