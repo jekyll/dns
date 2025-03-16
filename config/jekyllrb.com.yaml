@@ -75,12 +75,6 @@ talk:
       proxied: false
   type: CNAME
   value: jekyllrb.hosted-by-discourse.com.
-teams:
-  octodns:
-    cloudflare:
-      proxied: true
-  type: CNAME
-  value: symmetrical-bee-r6fywfpzwjn2o8rl9lgt3lyn.herokudns.com.
 utterson:
   octodns:
     cloudflare:
