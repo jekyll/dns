@@ -7,7 +7,6 @@ updates:
   directory: "/"
   schedule:
     interval: daily
-    time: "11:00"
   open-pull-requests-limit: 99
   reviewers:
   - parkr
@@ -15,7 +14,6 @@ updates:
   directory: "/"
   schedule:
     interval: daily
-    time: "11:00"
   open-pull-requests-limit: 99
   reviewers:
   - parkr
@@ -23,7 +21,6 @@ updates:
   directory: "/.github/actions/octodns-cloudflare"
   schedule:
     interval: daily
-    time: "11:00"
   open-pull-requests-limit: 99
   reviewers:
     - parkr
