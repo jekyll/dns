@@ -5,7 +5,7 @@ jobs:
     name: octodns test
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - name: octodns test
       uses: ./.github/actions/octodns-cloudflare
       env:
